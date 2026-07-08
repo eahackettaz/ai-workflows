@@ -41,5 +41,3 @@ and follow the interview.
 `improve-codebase-architecture`, `prime`, `skill-scout`, `tdd`, `write-a-skill`
 
 **Manual (`/name` only):** `grill-me`, `handoff`, `save`, `skill-check`, `zoom-out`
-
-All skills in this repo are your own work — free to share and redistribute.
