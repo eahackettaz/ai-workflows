@@ -38,11 +38,8 @@ and follow the interview.
 ## Skills
 
 **Auto-invoked:** `bootstrap`, `caveman`, `diagnose`, `grill-with-docs`,
-`improve-codebase-architecture`, `prime`, `skill-scout`, `tdd`, `webapp-testing`*,
-`write-a-skill`
+`improve-codebase-architecture`, `prime`, `skill-scout`, `tdd`, `write-a-skill`
 
 **Manual (`/name` only):** `grill-me`, `handoff`, `save`, `skill-check`, `zoom-out`
 
-\* `webapp-testing` is third-party (from
-[`anthropics/skills`](https://github.com/anthropics/skills)) — check its `LICENSE.txt`
-before redistributing this repo publicly. The other skills are your own.
+All skills in this repo are your own work — free to share and redistribute.
