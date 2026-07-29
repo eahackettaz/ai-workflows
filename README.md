@@ -10,9 +10,31 @@ in Dec 2025).
 - **`skills/`** — agent skills, each a `SKILL.md` folder. Standard format, so they
   load in Claude Code and GitHub Copilot (VS Code / CLI / cloud agent / code review),
   and other Agent-Skills-compatible tools.
+- **`scripts/`** — setup scripts to install alongside skills. Start with
+  `scripts/init-skills.ps1` (see [First-time setup](#first-time-setup) below).
 - **`ADOPT.md`** — a copy-paste prompt to hand an agent (e.g. GitHub Copilot). Given
   this repo's URL, it inventories the skills and grills you on which to
   **adopt / change / leave out** for your environment, then installs the ones you approve.
+
+## First-time setup
+
+After copying skills to `~/.copilot/skills/`, install the setup script and run it
+once in each workspace you use these skills in:
+
+```powershell
+# 1. Install the script (one-time, global)
+copy scripts\init-skills.ps1 "$HOME\.copilot\scripts\init-skills.ps1"
+
+# 2. Run from each workspace root (once per workspace)
+cd <your-workspace-root>
+& "$HOME\.copilot\scripts\init-skills.ps1"
+```
+
+This writes `.copilot/skills-manifest.json` into the workspace root (gitignored),
+which lets `/skill-check` list all your skills — including manual-only ones hidden
+from the `/` menu — without any out-of-workspace approval prompts.
+
+Re-run `init-skills.ps1` after installing or removing global skills.
 
 ## Using it
 
@@ -40,4 +62,4 @@ and follow the interview.
 **Auto-invoked:** `bootstrap`, `caveman`, `diagnose`, `grill-with-docs`,
 `improve-codebase-architecture`, `prime`, `skill-scout`, `tdd`, `write-a-skill`
 
-**Manual (`/name` only):** `grill-me`, `handoff`, `save`, `skill-check`, `zoom-out`
+**Manual (`/name` only):** `grill-me`, `handoff`, `init-skills`, `save`, `skill-check`, `zoom-out`
