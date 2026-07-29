@@ -1,6 +1,7 @@
 ---
 name: bootstrap
 description: Bootstraps a project's constraint docs — a project-local CLAUDE.md, ADRs for load-bearing decisions, and (only when there's real domain language) a CONTEXT.md — through a grill-driven interview, so the generic skills can adapt to this repo. Works on both new/empty projects and existing codebases (analyzes the code first, then fills the gaps). Use when a repo has no CLAUDE.md yet, or when the user wants to set up, bootstrap, or establish project conventions, constraints, or domain docs.
+disable-model-invocation: true
 ---
 
 # Bootstrap

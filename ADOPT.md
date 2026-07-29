@@ -50,3 +50,5 @@ Produce a plan: for each skill -> **Adopt as-is** / **Adopt with changes** (list
 For each skill I approve: copy it into the chosen location, apply the changes, and confirm. **Never install a skill I didn't approve.** Then summarize what changed and remind me to reload so the new skills appear in the `/` menu.
 
 Also copy `scripts/init-skills.ps1` to `~/.copilot/scripts/init-skills.ps1`, then remind me to run it from each workspace root to build the local skill manifest — this lets `/skill-check` list all installed skills (including manual-only ones) without approval prompts.
+
+Also copy `scripts/update-skills.ps1` to `~/.copilot/scripts/update-skills.ps1`, and remind me I can run it later to pull upstream changes, resync `skills/*` into `~/.copilot/skills/`, and refresh the workspace manifest in one step.
